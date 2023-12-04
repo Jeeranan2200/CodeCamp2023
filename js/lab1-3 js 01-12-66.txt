@@ -1,0 +1,28 @@
+Lab1
+  	const array = [29, 17, 13, 47, 23, 31];
+        let sum = 0;
+
+        array.forEach(function (element) {
+            sum += element;
+        });
+
+        console.log("ผลรวมของ elements ใน array คือ: " + sum);
+
+Lab2
+	const names = ['Mike', 'Sid', 'Jack', 'Bill'];
+        let count = 1;
+
+        names.forEach(function (name) {
+            console.log(count + ". " + name);
+            count++;
+        });
+
+Lab3
+	function squareArr(arr) {
+            return arr.map(function (element) {
+                return element * element;
+            });
+        }
+
+        const arr = [2, 3, 5, 7, 11];
+        console.log(squareArr(arr));

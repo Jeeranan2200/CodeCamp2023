@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7 Mini-Workshop-Validate Login</title>
+</head>
+<body>
+    <script>
+        let username = prompt("Username")//คำสั่งไว้input ข้อมูล
+        let password = prompt("Password")
+
+        if(username==""){
+            alert("username is required") //ถ้าไม่ใส่ username ก็จะขึ้น username is required
+        }
+        if(password==""){
+            alert("password is required") //ถ้าไม่ใส่ password ก็จะขึ้น password is required
+        }
+        if(username == "admin" && password == "1234"){
+            alert('Hello ' + username) //ถ้า username และ password ตรงตามเงื่อนไขก็จะโชว์ Hello admin
+        }
+        else{
+            alert("invalid username or password") //ถ้าหาก username และ password ไม่ตรงตามเงื่อนไข
+        }
+    </script>
+</body>
+</html>

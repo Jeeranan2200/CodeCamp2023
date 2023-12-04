@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB-5 : fruits Basket</title>
+</head>
+
+<body>
+    <script>
+        const fruits = {};
+
+        while (true) {
+            let key = prompt("ป้อนชื่อของผลไม้ (พิมพ์ 'stop' เพื่อหยุด):");
+
+            if (key.toLowerCase() === 'stop') {
+                break;
+            }
+
+            let value = parseInt(prompt(`ป้อนจำนวนของ ${key}:`));
+
+            if (isNaN(value)) {
+                alert("โปรดป้อนจำนวนให้ถูกต้อง");
+                continue;
+            }
+
+            key = (value > 1) ? key + 's' : key; // เพิ่ม 's' ถ้ามีมากกว่า 1 ผล
+
+            fruits[key] = value;
+        }
+
+        console.log(fruits);
+
+    </script>
+</body>
+
+</html>

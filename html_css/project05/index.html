@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Form Element</title>
+        </head>
+
+        <body>
+            <h1>Form Element</h1>
+            <form>
+                <label for="username">User Name :</label>
+                <input type="text" id="username" name="username" value="guest">
+                <label for="password">Password :</label>
+                <input type="password" id="password" name="password">
+                <input type="submit" value="OK">
+
+            </form>
+            <hr>
+            <h1>Type : Radio</h1> 
+             <!-- subject=css -->
+            <form>
+                <input type="radio" id="html" name="subject" value="html">
+                <label for="html">HTML</label>
+
+                <input type="radio" id="css" name="subject" value="css">
+                <label for="css">CSS</label>
+
+                <input type="radio" id="js" name="subject" value="js">
+                <label for="js">Javascript</label>
+
+                <input type="submit">
+            </form>
+            <hr>
+            <h1>Type : Checkbox</h1>
+            <form>
+                <input type="checkbox" id="html" name="selected" value="html">
+                <label for="html">HTML</label>
+
+                <input type="checkbox" id="css">
+                <label for="css">CSS</label>
+
+                <input type="checkbox" id="js" checked>
+                <label for="js">Javascript</label>
+
+                <input type="submit">
+            </form>
+            <hr>
+            <h1>Select - Option and Textarea</h1>
+            <form>
+                <select id="subject" name="register">
+                    <!-- register คือชื่อฟิว -->
+                    <option disabled selected >Please select</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">Javascript</option>
+
+                </select>
+                <textarea name="notes" id="" cols="30" rows="10"></textarea>
+                <!-- <button role="button">OK</button> -->
+                <input type="submit">
+                <!-- <input type="button" value="OK"> -->
+                <!-- ตอน submit ส่ง register=css -->
+            </form>
+            
+        </body>
+
+    </html>
+    <!-- sever จะรับส่วนที่เป็น name กับ value -->

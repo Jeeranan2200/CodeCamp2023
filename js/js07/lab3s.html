@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  จงเขียนฟังก์ชัน ucFirst(str) เพื่อแปลงตัวอักษรตัวแรกของ str ให้เป็นตัวพิมพ์ใหญ่ ส่วนตัวอักษรที่เหลือให้มีขนาดเหมือนเดิม
+
+        function ucFirst(str) {
+
+            let firstChar = str.charAt(*);
+            let upperFirstChar = firstChar.to ***** Case();
+
+            let restOfString = str.slice(*);
+            return upperFirstChar * restOfString;
+        }
+
+        //
+        function ucFirst(str) {
+            if (!str) return str; // กรณีที่ไม่มีข้อความใน str ให้คืนค่า str เดิม
+
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // ทดลองเรียกใช้งานฟังก์ชัน
+        const inputString = "hello world";
+        const result = ucFirst(inputString);
+        console.log(result); // ผลลัพธ์: "Hello world"
+
+    </script>
+</body>
+
+</html>

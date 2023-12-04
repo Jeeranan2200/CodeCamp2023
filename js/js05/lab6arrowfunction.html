@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Total Score</title>
+</head>
+<body>
+    <script>
+        const calscore = (win,draw,loss) => {
+            const winpoint = win * 3;
+            const drawpoint = draw;
+            return winpoint + drawpoint;
+        };
+
+        const score = calscore(5,5,5);
+        alert(score);
+    </script>
+</body>
+</html>

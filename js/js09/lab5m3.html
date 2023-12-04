@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- จงหา element ตัวแรก ใน inventory ที่มี name เท่ากับ cherries -->
+    <script>
+        const inventory = [
+            { name: 'apples', quantity: 2 },
+            { name: 'bananas', quantity: 0 },
+            { name: 'cherries', quantity: 5 }
+        ];
+
+        const cherriesItem = inventory.find(function (item) {
+            return item.name === 'cherries';
+        });
+
+        console.log(cherriesItem); // ผลลัพธ์: { name: 'cherries', quantity: 5 }
+
+    </script>
+</body>
+
+</html>
