@@ -1,0 +1,155 @@
+HomeWork วันที่29 ส่ง30
+*JS03-Condition
+
+LAB-9 : Challenge
+
+let num1 = parseInt(prompt("ป้อนตัวเลขที่ 1:"));
+let num2 = parseInt(prompt("ป้อนตัวเลขที่ 2:"));
+let num3 = parseInt(prompt("ป้อนตัวเลขที่ 3:"));
+
+if (num1 >= num2 && num2 >= num3) {
+    console.log(num1, num2, num3);
+} else if (num1 >= num3 && num3 >= num2) {
+    console.log(num1, num3, num2);
+} else if (num2 >= num1 && num1 >= num3) {
+    console.log(num2, num1, num3);
+} else if (num2 >= num3 && num3 >= num1) {
+    console.log(num2, num3, num1);
+} else if (num3 >= num1 && num1 >= num2) {
+    console.log(num3, num1, num2);
+} else {
+    console.log(num3, num2, num1);
+}
+
+LAB-10 : Refractor
+
+let age = prompt('How old are you');
+let message = (age >= 18) ? 'Allowed' : 'Not allowed';
+
+*JS05-Function-Part1
+
+5.Day to Second
+const daysToHours = days => days * 24;
+
+const days = 5;
+const hours = daysToHours(days);
+console.log(`${days} วัน เท่ากับ ${hours} ชั่วโมง`);
+
+9.Temperature Convert
+const fahrenheitToCelsius = fahrenheit => (fahrenheit - 32) * 5 / 9;
+
+const fahrenheit = 68;
+const celsius = fahrenheitToCelsius(fahrenheit);
+console.log(`${fahrenheit} องศาฟาเรนไฮต์ เท่ากับ ${celsius.toFixed(2)} องศาเซลเซียส`);
+
+10.Factorial
+const factorial = num => {
+  if (num === 0 || num === 1) {
+    return 1;
+  } else {
+    let result = 1;
+    for (let i = 2; i <= num; i++) {
+      result *= i;
+    }
+    return result;
+  }
+};
+const number = 5;
+const result = factorial(number);
+console.log(`ค่า factorial ของ ${number} คือ ${result}`);
+-----------------------------------------------------
+HomeWork วันที่30 ส่ง1
+*Lab 2
+function Accumulator(startingValue) {
+  this.currentValue = startingValue;
+
+  this.read = function() {
+    let userInput = parseFloat(prompt("ป้อนค่าที่ต้องการบวกเข้ากับค่าปัจจุบัน:", 0));
+    if (!isNaN(userInput)) {
+      this.currentValue += userInput;
+    } else {
+      alert("โปรดป้อนค่าที่ถูกต้อง");
+    }
+  };
+
+  this.show = function() {
+    alert(`ค่าปัจจุบัน: ${this.currentValue}`);
+  };
+}
+
+*Lab 5
+function truncate(str, length) {
+  if (str.length > length) {
+    return str.slice(0, length - 1) + "…";
+  } else {
+    return str;
+  }
+}
+
+// ตัวอย่างการใช้งาน
+console.log(truncate("What I'd like to tell on this topic is:", 20)); // What I'd like to te…
+console.log(truncate("Hi everyone!", 20)); // Hi everyone!
+
+*Lab 8
+function calculateCircumference(radius) {
+  const circumference = 2 * Math.PI * radius;
+  return circumference;
+}
+
+// ตัวอย่างการใช้งาน
+const radius = 5; // เปลี่ยนค่าขนาดของรัศมีตามต้องการ
+const result = calculateCircumference(radius);
+console.log(`เส้นรอบวงของวงกลมที่มีรัศมี ${radius} คือ ${result}`);
+
+*Lab 9
+function calculateDiagonal(side1, side2) {
+  return Math.sqrt(side1 ** 2 + side2 ** 2);
+}
+
+const sideA = 3; 
+const sideB = 4; 
+const result = calculateDiagonal(sideA, sideB);
+console.log(`เส้นทแยงมุมของสี่เหลี่ยมผืนผ้าที่มีด้าน ${sideA} และ ${sideB} คือ ${result}`);
+----------------------------------------------------------
+HomeWork วันที่1 ส่ง4
+*Lab 19
+let user = {
+  name: 'John',
+  years: 27
+};
+
+let { name, years: age, isAdmin = false } = user;
+
+console.log(name); // 'John'
+console.log(age); // 27
+console.log(isAdmin); // false
+
+*Lab 21
+let arr = [1, [2, [[[3, 4], 5], 6]]];
+
+let [a, [b, [[, c], d]], e, f] = arr;
+
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 3
+console.log(d); // 4
+console.log(e); // 5
+console.log(f); // 6
+
+*Lab 24
+a จะมีค่าเป็น undefined และ b จะมีค่าเป็น undefined
+
+*Lab 28
+const users = [
+  { user: "Name1" },
+  { user: "Name2", age: 2 },
+  { user: "Name2" },
+  { user: "Name3", age: 4 }
+];
+
+for (const { user, age = "unknown" } of users) {
+  console.log(`${user} ${age}`);
+}
+-----------------------------------------------------------
+HomeWork วันที่4 ส่ง6
+Your Site
